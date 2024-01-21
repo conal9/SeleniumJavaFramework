@@ -2,20 +2,34 @@
 package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import config.PropertiesFile;
 import webpages.GoogleSearchPageObjects;
 
 public class GoogleSearchPage_TestNG_Demo {
 	
+	
+	
 	private static WebDriver driver = null;
+	public static String browserName = null;
 	
 	@BeforeTest 
 	
-	public void setUpTest() { //Settinh up test. Note: https://stackoverflow.com/questions/76477186/selenium-not-requiring-chromedriver
+	public void setUpTest() { //Setting up test. Note: https://stackoverflow.com/questions/76477186/selenium-not-requiring-chromedriver
+		
+		PropertiesFile.getProperties();
 		WebDriver driver = null;
+		
+		if(browserName.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		}
+		else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		}
 	}
 	
 	@Test

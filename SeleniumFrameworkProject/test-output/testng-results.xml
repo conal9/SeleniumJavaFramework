@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-20T15:29:23 GMT" name="Suite" finished-at="2024-01-20T15:29:30 GMT" duration-ms="7045">
+  <suite started-at="2024-01-21T18:25:17 GMT" name="Default suite" finished-at="2024-01-21T18:25:35 GMT" duration-ms="18339">
     <groups>
     </groups>
-    <test started-at="2024-01-20T15:29:23 GMT" name="Test" finished-at="2024-01-20T15:29:30 GMT" duration-ms="7045">
+    <test started-at="2024-01-21T18:25:17 GMT" name="Default test" finished-at="2024-01-21T18:25:35 GMT" duration-ms="18339">
       <class name="tests.GoogleSearchPage_TestNG_Demo">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@738dc9b]" started-at="2024-01-20T15:29:23 GMT" name="setUpTest" finished-at="2024-01-20T15:29:23 GMT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@3c77d488]" started-at="2024-01-21T18:25:17 GMT" name="setUpTest" finished-at="2024-01-21T18:25:34 GMT" duration-ms="16401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="googleSearchTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@738dc9b]" started-at="2024-01-20T15:29:23 GMT" name="googleSearchTest" finished-at="2024-01-20T15:29:26 GMT" duration-ms="3078" status="PASS">
+        <test-method signature="googleSearchTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@3c77d488]" started-at="2024-01-21T18:25:34 GMT" name="googleSearchTest" finished-at="2024-01-21T18:25:35 GMT" duration-ms="1772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleSearchTest -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@738dc9b]" started-at="2024-01-20T15:29:30 GMT" name="tearDownTest" finished-at="2024-01-20T15:29:30 GMT" duration-ms="173" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo@3c77d488]" started-at="2024-01-21T18:25:35 GMT" name="tearDownTest" finished-at="2024-01-21T18:25:35 GMT" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- tests.GoogleSearchPage_TestNG_Demo -->
-      <class name="tests.GoogleSearchPage_TestNG_Demo2">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo2@3e27aa33]" started-at="2024-01-20T15:29:23 GMT" name="setUpTest" finished-at="2024-01-20T15:29:23 GMT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method signature="googleSearchTest2()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo2@3e27aa33]" started-at="2024-01-20T15:29:26 GMT" name="googleSearchTest2" finished-at="2024-01-20T15:29:28 GMT" duration-ms="1766" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleSearchTest2 -->
-        <test-method signature="googleSearchTest3()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo2@3e27aa33]" started-at="2024-01-20T15:29:28 GMT" name="googleSearchTest3" finished-at="2024-01-20T15:29:30 GMT" duration-ms="1846" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleSearchTest3 -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:tests.GoogleSearchPage_TestNG_Demo2@3e27aa33]" started-at="2024-01-20T15:29:30 GMT" name="tearDownTest" finished-at="2024-01-20T15:29:30 GMT" duration-ms="140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTest -->
-      </class> <!-- tests.GoogleSearchPage_TestNG_Demo2 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
