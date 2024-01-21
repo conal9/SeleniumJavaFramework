@@ -1,0 +1,16 @@
+[INFO ] 2024-01-20 16:39:31.246 [main] Log4jDemo - This is an information message
+[ERROR] 2024-01-20 16:39:31.248 [main] Log4jDemo - This is an error message
+[WARN ] 2024-01-20 16:39:31.248 [main] Log4jDemo - This is a warning message
+[FATAL] 2024-01-20 16:39:31.248 [main] Log4jDemo - This is a fatal message
+[INFO ] 2024-01-20 16:39:45.693 [main] Log4jDemo - This is an information message
+[ERROR] 2024-01-20 16:39:45.695 [main] Log4jDemo - This is an error message
+[WARN ] 2024-01-20 16:39:45.695 [main] Log4jDemo - This is a warning message
+[FATAL] 2024-01-20 16:39:45.695 [main] Log4jDemo - This is a fatal message
+[INFO ] 2024-01-20 16:42:38.861 [main] Log4jDemo - This is an information message
+[ERROR] 2024-01-20 16:42:38.864 [main] Log4jDemo - This is an error message
+[WARN ] 2024-01-20 16:42:38.864 [main] Log4jDemo - This is a warning message
+[FATAL] 2024-01-20 16:42:38.864 [main] Log4jDemo - This is a fatal message
+[INFO ] 2024-01-20 19:51:12.419 [main] Log4jDemo - This is an information message
+[ERROR] 2024-01-20 19:51:12.422 [main] Log4jDemo - This is an error message
+[WARN ] 2024-01-20 19:51:12.422 [main] Log4jDemo - This is a warning message
+[FATAL] 2024-01-20 19:51:12.422 [main] Log4jDemo - This is a fatal message
