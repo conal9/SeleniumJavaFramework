@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public class GoogleSearchPageObjects { //Function to locate the objects on the page
+public class GoogleSearchPageObjects { //Class to locate the objects on the page
 	
 	WebDriver driver = null;
 	

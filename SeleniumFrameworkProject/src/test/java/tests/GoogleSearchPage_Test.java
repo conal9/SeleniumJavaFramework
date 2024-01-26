@@ -1,7 +1,6 @@
 package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import webpages.GoogleSearchPageObjects;
 
 public class GoogleSearchPage_Test {
@@ -12,7 +11,7 @@ public class GoogleSearchPage_Test {
 		googleSearchTest();
 	}
 	
-	public static void googleSearchTest() { //this function is a test for a basic google search
+	public static void googleSearchTest() { //this function is the actual test for a basic google search
 		driver = new ChromeDriver();
 		GoogleSearchPageObjects searchPageObjs = new GoogleSearchPageObjects(driver); //?
 		
