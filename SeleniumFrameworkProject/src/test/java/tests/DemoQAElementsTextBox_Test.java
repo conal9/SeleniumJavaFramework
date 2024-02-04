@@ -1,5 +1,10 @@
 package tests;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import webpages.DemoQAHomepage;
@@ -21,6 +26,17 @@ public class DemoQAElementsTextBox_Test {
 		DemoQAElementsTextBox textBox = new DemoQAElementsTextBox(driver);
 		
 		driver.get("https://demoqa.com/");
+		
+		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[2]/p")).click(); //Cookies pop-up
+		List<WebElement> elements = driver.findElements(By.className("fc-slider-el"));
+		
+		for (WebElement element : elements) {
+			
+			if (element.isSelected())
+				
+				element.click();
+		}
+		
 		homepage.clickOnElements();
 		elementsPage.clickOnTextBoxLink();
 		textBox.enterFullName("Conal Honey");
