@@ -36,8 +36,7 @@ public class GoogleSearchPage_TestNG_Demo {
 	public static void googleSearchTest() { //this function is a test for a basic google search
 		driver = new ChromeDriver();
 		GoogleSearchPageObjects searchPageObjs = new GoogleSearchPageObjects(driver); //Creating new object of the GoogleSearchPageObjects class. 
-		
-		
+				
 		driver.get("https://www.google.ie");
 		searchPageObjs.clickOnReject();
 		searchPageObjs.setSearchboxText("Oldtown Woods");

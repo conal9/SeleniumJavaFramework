@@ -12,43 +12,31 @@ public class DemoQAElementsTextBox_Test {
 	
 	public static void main (String[] args) {
 		elementsTextBox();
+		submitAllTextBoxesTest();
 	}
 	
 	public static void elementsTextBox() { //this function will test the Text Box of the 'Elements' section
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(); //?
 		DemoQAHomepage homepage = new DemoQAHomepage(driver);
 		DemoQAElementsPage elementsPage = new DemoQAElementsPage(driver);
-		DemoQAElementsTextBox textBox = new DemoQAElementsTextBox(driver);
 		
 		driver.get("https://demoqa.com/");
-		
 		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[2]/p")).click(); //Cookies pop-up - manage options button
-		driver.findElement(By.xpath("(//p[@class='fc-button-label'][normalize-space()='Confirm choices'])[1]")).click();
+		driver.findElement(By.xpath("(//p[@class='fc-button-label'][normalize-space()='Confirm choices'])[1]")).click(); 
 		
-		/*driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[3]")).click();
-		driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[9]")).click();
-		driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[11]")).click();
-		driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[13]")).click();
-		driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[15]")).click();
-		driver.findElement(By.xpath("(//span[@class='fc-slider-el'])[17]")).click();
-		driver.findElement(By.xpath("//p[@class='fc-button-label']")).click();
-		//river.findElement(By.xpath("//p[@class='fc-navigation-button-label']")).click();
-		System.out.println("click2");
-		//List<WebElement> elements = driver.findElements(By.xpath("//input[@type='checkbox' and @ariaPressed='true']")); //doesn't work
-		//List<WebElement> elements = driver.findElements(By.className("fc-slider-el")); 		
-		
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
-		
-		for (WebElement element : elements) {
-			element.click();
-		} 
-		*/  
 		homepage.clickOnElements();
 		elementsPage.clickOnTextBoxLink();
-		textBox.enterFullName("Conal Honey");
-		textBox.clickSubmitButton();
 	} 
+	
+	public static void submitAllTextBoxesTest() {
+		DemoQAElementsTextBox textbox = new DemoQAElementsTextBox(driver);
+		
+		textbox.fullName("Firstname Surname");
+		textbox.emailTextbox("email@host.com");
+		textbox.currentAddress("123 Street Name, City Name, County, Eircode");
+		textbox.permanentAddress("123 Street Name, City Name, County, Eircode");
+		textbox.clickSubmitButton();
+	}
 }
 
 
