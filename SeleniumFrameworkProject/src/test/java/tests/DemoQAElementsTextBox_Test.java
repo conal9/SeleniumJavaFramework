@@ -37,6 +37,11 @@ public class DemoQAElementsTextBox_Test {
 		textbox.permanentAddress("123 Street Name, City Name, County, Eircode");
 		textbox.clickSubmitButton();
 	}
+	
+	public static void verifyEmailAddressFormatIsCorrect() {
+		
+		
+	}
 }
 
 
