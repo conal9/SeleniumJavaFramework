@@ -2,6 +2,10 @@ package tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import webpages.DemoQAHomepage;
 import webpages.DemoQAElementsPage;
 import webpages.DemoQAElementsTextBox;
@@ -9,37 +13,42 @@ import webpages.DemoQAElementsTextBox;
 public class DemoQAElementsTextBox_Test {
 	
 	private static WebDriver driver = null;
-	
-	public static void main (String[] args) {
-		elementsTextBox();
-		submitAllTextBoxesTest();
-	}
-	
-	public static void elementsTextBox() { //this function will test the Text Box of the 'Elements' section
+		
+	@BeforeTest
+	public void setUpTest() {
 		driver = new ChromeDriver(); //?
 		DemoQAHomepage homepage = new DemoQAHomepage(driver);
 		DemoQAElementsPage elementsPage = new DemoQAElementsPage(driver);
 		
 		driver.get("https://demoqa.com/");
-		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[2]/p")).click(); //Cookies pop-up - manage options button
-		driver.findElement(By.xpath("(//p[@class='fc-button-label'][normalize-space()='Confirm choices'])[1]")).click(); 
-		
 		homepage.clickOnElements();
 		elementsPage.clickOnTextBoxLink();
-	} 
-	
-	public static void submitAllTextBoxesTest() {
-		DemoQAElementsTextBox textbox = new DemoQAElementsTextBox(driver);
-		
-		textbox.fullName("Firstname Surname");
-		textbox.emailTextbox("email@host.com");
-		textbox.currentAddress("123 Street Name, City Name, County, Eircode");
-		textbox.permanentAddress("123 Street Name, City Name, County, Eircode");
-		textbox.clickSubmitButton();
 	}
 	
-	public static void verifyEmailAddressFormatIsCorrect() {
+	@Test
+	public static void submitAllTextBoxesTest() { //This test is to verify that when all text boxes are correct, user can submit and user input will show in a new area at the bottom of the screen
+		DemoQAElementsTextBox textboxPage = new DemoQAElementsTextBox(driver);
 		
+		textboxPage.fullName("Firstname Surname");
+		textboxPage.emailTextbox("email@host.com");
+		textboxPage.currentAddress("123 Street Name, City Name, County, Eircode");
+		textboxPage.permanentAddress("123 Street Name, City Name, County, Eircode");
+		textboxPage.clickSubmitButton();
+	}
+	
+	@Test
+	public static void verifyEmailAddressFormatIsWrong() { //This test is to test that the email text box does not allow erroneous email address formats.
+		DemoQAElementsTextBox textboxPage = new DemoQAElementsTextBox(driver);
+		
+		textboxPage.emailTextbox("x@.com"); //planning later to read in this input from properties file. 
+		textboxPage.clickSubmitButton();
+	}
+	
+	@AfterTest
+	public void tearDownTest () {
+		//close
+		driver.close();
+		driver.quit();
 		
 	}
 }

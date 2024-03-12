@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.ExtentReportsBasicDemo_TestNG">
+      <class name="tests.DemoQAElementsTextBox_Test_TestNG">
         <methods>
-          <include name="tearDownSuite"/>
           <include name="tearDownTest"/>
-          <include name="setUp"/>
-          <include name="test1"/>
+          <include name="verifyEmailAddressFormatIsWrong"/>
+          <include name="submitAllTextBoxesTest"/>
+          <include name="setUpTest"/>
         </methods>
-      </class> <!-- tests.ExtentReportsBasicDemo_TestNG -->
+      </class> <!-- tests.DemoQAElementsTextBox_Test_TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
