@@ -1,6 +1,8 @@
 package tests;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -42,7 +44,20 @@ public class DemoQAElementsTextBox_Test {
 		
 		textboxPage.emailTextbox("x@.com"); //planning later to read in this input from properties file. 
 		textboxPage.clickSubmitButton();
-	}
+		
+		/*try {
+		WebElement emailAddressDisplayBox = driver.findElement(By.xpath("//p[@id='email']")); 
+		
+		if (emailAddressDisplayBox.isDisplayed()) {
+			throw new RuntimeException("Element is unexpectedly visible: " + emailAddressDisplayBox);
+		}
+		
+		}
+		catch (NoSuchElementException e) {
+            // If the element is not found, the test passes
+            //System.out.println("Element is not present. Test Passed!");
+		}*/
+}
 	
 	@AfterTest
 	public void tearDownTest () {
